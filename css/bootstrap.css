@@ -10749,4 +10749,13 @@ body {
     background-color: #b3d8d2;
 }
 
-.flexo {}
+.flexo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pic {
+    flex-shrink: 0;
+    align-self: center
+}
