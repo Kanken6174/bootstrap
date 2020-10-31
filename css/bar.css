@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "bad";
+    src: url("fonts/bad.ttf");
+    }
+
+    .navbar-brando {
+
+        font-family:'bad';
+
+      }
