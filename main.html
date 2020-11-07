@@ -29,23 +29,26 @@
     <![endif]-->
 </head>
 
-<body>
+<body style="position: relative;">
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/scroll-animate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <nav id="navbar-main" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="align-items: center;">
+    <nav id="menu" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="align-items: center;">
 
         <link href="css/bar.css" rel="stylesheet">
         <a class="navbar-brand" href="main.html">Breaking Blog</a>
 
         <link href="css/bootstrap.css" rel="stylesheet">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -85,7 +88,7 @@
                           Contactez-nous
                         </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <form class="px-4 py-3">
+                                        <form class="px-4 py-3" action="http://localhost:8080/bootstrap/php/main.php">
                                             <div class="form-group">
                                                 <label for="exampleDropdownFormEmail1">Nom</label>
                                                 <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Votre nom" required>
@@ -151,7 +154,7 @@
 
     </nav>
     </header>
-    <div data-spy="scroll" data-target="#navbar-main" data-offset="0">
+    <div id="tospy" data-spy="scroll" data-target="#menu" data-offset="50">
         <div id="carouselphotos" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselphotos" data-slide-to="0" class="active"></li>
@@ -380,7 +383,7 @@
         <div id="vid" class="collapse" aria-labelledby="headingVid" data-parent="#accordion">
             <div class="card-body">
                 <figure style="position: relative; top: 0px; left: 450px">
-                    <video width="800" height="450" autoplay controls loop>
+                    <video width="800" height="450" controls loop>
               <source src="videos/video.mp4" type="video/mp4">
               <source src="videos/seels.webm" type="video/webm">
               <source src="videos/crunchyseels.ogv" type="video/ogv">
@@ -393,100 +396,102 @@
         </div>
 
 
-    </div>
-    <div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#b1" aria-expanded="false" aria-controls="b1">
+
+        <div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#b1" aria-expanded="false" aria-controls="b1">
   Biographie de Walter White
 </button>
-                </h5>
-            </div>
-            <div id="b1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body flexo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bryan_Cranston_%287598828512%29.jpg/280px-Bryan_Cranston_%287598828512%29.jpg" class="pic"></br>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Alias</th>
-                                <th scope="col">naissance</th>
-                                <th scope="col">Activités</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Heisenberg</td>
-                                <td>7 septembre 1958</td>
-                                <td>Professeur de chimie</td>
-                            </tr>
-                            <tr>
-                                <td>Dr Chimie</td>
-                                <td> </td>
-                                <td>Fabricant et trafiquant de méthamphétamine</td>
-                            </tr>
-                            <tr>
-                                <td>M. Lambert</td>
-                                <td></td>
-                                <td>Directeur dans un lave-auto</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    Tuco Salamanca, le caïd psychopathe, enlève Walter et Jesse car il croit que son bras droit Gonzo l’a trahi (en réalité il a été tué accidentellement). La famille de Walter s’inquiète de sa disparition. Hank part alors à sa recherche et trouve le repaire
-                    de Tuco. Alors que Walter et Jesse viennent de s’échapper, Hank abat Tuco. Walter fait alors passer sa disparition pour un épisode de démence dû à son cancer. Mais Skyler a des doutes et devient de plus en plus distante. De son côté,
-                    Walter pense que son fils prend trop exemple sur Hank et se méfie de l’employeur de sa femme, Ted. Pendant ce temps, Walter et Jesse décident de monter leur propre affaire : Walter « cuisine » la méthamphétamine et les dealers de Jesse
-                    la vendent. L’empire d'Heisenberg s’étend de plus en plus, surtout quand la rumeur court que Jesse a tué un junkie (c’est en fait un malentendu). Mais Walter a été trop ambitieux et les ennuis commencent à pleuvoir : un des dealers
-                    de Jesse est arrêté, un autre est abattu et le dernier décide finalement d’abandonner. Le conseiller de Walter, l’avocat véreux Saul Goodman, le met alors en contact avec le propriétaire d’une chaîne de restaurants qui est en fait
-                    un baron de la drogue particulièrement discret. Walter parvient alors à vendre pour 1,2 million de dollars de méthamphétamine mais refuse de donner sa part à Jesse, qui sombre dans l'héroïne avec sa petite amie Jane. Jane meurt finalement
-                    d’une overdose d'héroïne et Walter, qui s’attache de plus en plus à Jesse, le fait entrer en cure de désintoxication. Pendant ce temps, la chimiothérapie fait son effet et Walter peut finalement se faire opérer. Mais Skyler, qui a
-                    finalement donné naissance à une petite Holly, n’a jamais cessé de soupçonner Walter. Elle décide de mener l’enquête à la suite d'un lapsus de son mari et découvre tous ses mensonges. À la fin du dernier épisode, Skyler quitte Walter.
-                    C’est alors que le père de Jane, contrôleur aérien, rongé par la tristesse, provoque la collision de deux avions. Des débris tombent sur la maison des White.
+                    </h5>
+                </div>
+                <div id="b1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body flexo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Bryan_Cranston_%287598828512%29.jpg/280px-Bryan_Cranston_%287598828512%29.jpg" class="pic"></br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Alias</th>
+                                    <th scope="col">naissance</th>
+                                    <th scope="col">Activités</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Heisenberg</td>
+                                    <td>7 septembre 1958</td>
+                                    <td>Professeur de chimie</td>
+                                </tr>
+                                <tr>
+                                    <td>Dr Chimie</td>
+                                    <td> </td>
+                                    <td>Fabricant et trafiquant de méthamphétamine</td>
+                                </tr>
+                                <tr>
+                                    <td>M. Lambert</td>
+                                    <td></td>
+                                    <td>Directeur dans un lave-auto</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        Tuco Salamanca, le caïd psychopathe, enlève Walter et Jesse car il croit que son bras droit Gonzo l’a trahi (en réalité il a été tué accidentellement). La famille de Walter s’inquiète de sa disparition. Hank part alors à sa recherche et trouve le repaire
+                        de Tuco. Alors que Walter et Jesse viennent de s’échapper, Hank abat Tuco. Walter fait alors passer sa disparition pour un épisode de démence dû à son cancer. Mais Skyler a des doutes et devient de plus en plus distante. De son
+                        côté, Walter pense que son fils prend trop exemple sur Hank et se méfie de l’employeur de sa femme, Ted. Pendant ce temps, Walter et Jesse décident de monter leur propre affaire : Walter « cuisine » la méthamphétamine et les dealers
+                        de Jesse la vendent. L’empire d'Heisenberg s’étend de plus en plus, surtout quand la rumeur court que Jesse a tué un junkie (c’est en fait un malentendu). Mais Walter a été trop ambitieux et les ennuis commencent à pleuvoir : un
+                        des dealers de Jesse est arrêté, un autre est abattu et le dernier décide finalement d’abandonner. Le conseiller de Walter, l’avocat véreux Saul Goodman, le met alors en contact avec le propriétaire d’une chaîne de restaurants
+                        qui est en fait un baron de la drogue particulièrement discret. Walter parvient alors à vendre pour 1,2 million de dollars de méthamphétamine mais refuse de donner sa part à Jesse, qui sombre dans l'héroïne avec sa petite amie
+                        Jane. Jane meurt finalement d’une overdose d'héroïne et Walter, qui s’attache de plus en plus à Jesse, le fait entrer en cure de désintoxication. Pendant ce temps, la chimiothérapie fait son effet et Walter peut finalement se faire
+                        opérer. Mais Skyler, qui a finalement donné naissance à une petite Holly, n’a jamais cessé de soupçonner Walter. Elle décide de mener l’enquête à la suite d'un lapsus de son mari et découvre tous ses mensonges. À la fin du dernier
+                        épisode, Skyler quitte Walter. C’est alors que le père de Jane, contrôleur aérien, rongé par la tristesse, provoque la collision de deux avions. Des débris tombent sur la maison des White.
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#b2" aria-expanded="false" aria-controls="b2">
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#b2" aria-expanded="false" aria-controls="b2">
   Biographie de Jesse Pinkman
 </button>
-                </h5>
-            </div>
-            <div id="b2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body flexo">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Aaron_Paul.jpg/200px-Aaron_Paul.jpg" class="pic">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Alias</th>
-                                <th scope="col">naissance</th>
-                                <th scope="col">Activités</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cap'n Cook</td>
-                                <td>14 septembre 1984</td>
-                                <td>Narcotraficant</td>
-                            </tr>
-                            <tr>
-                                <td>Jesse Jackson</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div>
-                        Jesse Pinkman est né le 14 septembre 1984 à Albuquerque dans le Nouveau-Mexique. Forcé de quitter la maison de ses parents en raison de ses problèmes d'addiction aux drogues et de son mode de vie, Jesse a emménagé dans la maison de sa tante Ginny qui
-                        l'a pris en charge. Lorsque la série débute, sa tante est décédée, mais Jesse habite toujours cette maison contre la volonté de ses parents. Jesse était un mauvais élève au lycée, en grande partie du fait de son inattention en
-                        cours et de son apathie. Walter White, que Jesse appelle presque toujours « Mr White », était son professeur de chimie. Il a recalé Jesse aux examens. Ils se retrouvent des années plus tard lorsque Walt accompagne son beau-frère,
-                        agent de la DEA, lors d'une opération contre des narco-trafiquants. Il proposera à Jesse de s'associer pour produire ensemble de la méthamphétamine, et ainsi débute l'intrigue de Breaking Bad. Walter dira plus tard à contrecœur
-                        que la méthamphétamine de Jesse est aussi bonne que la sienne et supérieure à celle que produisait Gale Boetticher (David Costabile), diplômé d'études supérieures en chimie. Dans l'épisode Heisenberg, Walter se confère à lui-même
-                        et Jesse le titre «des deux meilleurs cuisiniers de méthamphétamine en Amérique ». Tout au long de la série, Jesse restera un homme d'une grande humanité. Contrairement à Walter White, le jeune Pinkman ne sera jamais fait pour
-                        ce monde violent qui est le trafic de drogue. Il est certes naïf et manipulable mais il est loin d'être égocentrique et manipulateur comme son compagnon.</div>
+                    </h5>
+                </div>
+                <div id="b2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body flexo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Aaron_Paul.jpg/200px-Aaron_Paul.jpg" class="pic">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Alias</th>
+                                    <th scope="col">naissance</th>
+                                    <th scope="col">Activités</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cap'n Cook</td>
+                                    <td>14 septembre 1984</td>
+                                    <td>Narcotraficant</td>
+                                </tr>
+                                <tr>
+                                    <td>Jesse Jackson</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            Jesse Pinkman est né le 14 septembre 1984 à Albuquerque dans le Nouveau-Mexique. Forcé de quitter la maison de ses parents en raison de ses problèmes d'addiction aux drogues et de son mode de vie, Jesse a emménagé dans la maison de sa tante Ginny qui
+                            l'a pris en charge. Lorsque la série débute, sa tante est décédée, mais Jesse habite toujours cette maison contre la volonté de ses parents. Jesse était un mauvais élève au lycée, en grande partie du fait de son inattention
+                            en cours et de son apathie. Walter White, que Jesse appelle presque toujours « Mr White », était son professeur de chimie. Il a recalé Jesse aux examens. Ils se retrouvent des années plus tard lorsque Walt accompagne son beau-frère,
+                            agent de la DEA, lors d'une opération contre des narco-trafiquants. Il proposera à Jesse de s'associer pour produire ensemble de la méthamphétamine, et ainsi débute l'intrigue de Breaking Bad. Walter dira plus tard à contrecœur
+                            que la méthamphétamine de Jesse est aussi bonne que la sienne et supérieure à celle que produisait Gale Boetticher (David Costabile), diplômé d'études supérieures en chimie. Dans l'épisode Heisenberg, Walter se confère à lui-même
+                            et Jesse le titre «des deux meilleurs cuisiniers de méthamphétamine en Amérique ». Tout au long de la série, Jesse restera un homme d'une grande humanité. Contrairement à Walter White, le jeune Pinkman ne sera jamais fait pour
+                            ce monde violent qui est le trafic de drogue. Il est certes naïf et manipulable mais il est loin d'être égocentrique et manipulateur comme son compagnon.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

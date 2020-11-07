@@ -4,10 +4,11 @@ $(document).ready(function() {
         var link = $(this);
         link.closest('li').addClass('active');
         // Scroll animation
-        $('html, body').animate( { scrollTop: $(link.attr('href')).offset().top }, 750 );
+        $('html, body').animate({ scrollTop: $(link.attr('href')).offset().top }, 750);
         return false;
     });
 
-    //Scrollspy
-    $('body').scrollspy({ target: '#menu' });
+    //Scrollspy édité pour mon site
+    //{ target: '#menu' } retiré
+    $('#tospy').scrollspy();
 });
