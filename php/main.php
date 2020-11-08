@@ -114,8 +114,8 @@
 
 </body>
 
-
-<footer style="align-self: center;">
+                </br></br></br></br></br></br>
+<footer class="text-center">
     Site web par Yorick geoffre groupe 8. Breaking bad AMC tous droits réservés
 </footer>
 
