@@ -10759,3 +10759,9 @@ body {
     flex-shrink: 0;
     align-self: center
 }
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
